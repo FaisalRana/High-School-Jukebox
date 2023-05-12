@@ -1,8 +1,8 @@
 export default class SpotifyService {
   static async getToken() {
     console.log("test");
-    console.log(process.env.CLIENT_ID);
-    console.log(process.env.CLIENT_SECRET);
+    console.log(process.env.VITE__CLIENT_ID);
+    console.log(process.env.VITE_CLIENT_SECRET);
     try {
       const response = await fetch("https://accounts.spotify.com/api/token", {
         method: "POST",
@@ -10,7 +10,9 @@ export default class SpotifyService {
           "Content-Type": "application/x-www-form-urlencoded",
           Authorization:
             "Basic " +
-            btoa(`${process.env.CLIENT_ID}:${process.env.CLIENT_SECRET}`),
+            btoa(
+              `${process.env.VITE_CLIENT_ID}:${process.env.VITE_CLIENT_SECRET}`
+            ),
         },
         body: "grant_type=client_credentials",
       });
