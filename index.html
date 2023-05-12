@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <title>Spotify-High-School-Jukebox</title>
+    <div class="card-landing" style="background: -webkit-gradient(linear, left bottom, left top, from(#191414), to(#000000));
+    background: -webkit-linear-gradient(bottom, #191414 0%, #000000 100%);
+    background: -moz-linear-gradient(bottom, #191414 0%, #000000 100%);
+    background: -o-linear-gradient(bottom, #191414 0%, #000000 100%);
+    background: linear-gradient(to top, #191414 0%, #000000 100%);
+    position: fixed;
+    bottom: 0px;
+    width: 100vw;
+    height: 100%;
+    z-index: 1;
+    display: flex;">
+        <div id="neonSignLarge">
+          <h3>S<span id="offset">P</span>O<span id="offset">T</span>I<span id="offset">F</span>Y<span id="offset"></span>
+          </h3>
+            <h3>H<span id="offset">I</span>G<span id="offset">H</span> S<span id="offset">CH</span>O<span id="offset">OL</span>
+            </h3>
+            <h1><span id="offset">J</span>U<span id="offset">KE</span> B<span id="offset">OX</span></h1>
+        </div>
+    </div>
+</head>
+
+<body>
+    <div class="page-wrapper bg-gra-01 p-t-180 p-b-100 font-poppins">
+        <div class="wrapper wrapper--w780">
+            <div class="card card-3">
+                <div class="card-heading"></div>
+                <div class="card-body">
+                    <div id="neonSign">
+                        <h4>H<span id="offset">I</span>G<span id="offset">H</span> S<span id="offset">CH</span>O<span id="offset">OL</span>
+                        </h4>
+                        <h2><span id="offset">J</span>U<span id="offset">KE</span> B<span id="offset">OX</span></h2>
+                    </div>
+                    <br>
+                    <br>
+                        <form id="input-form">
+                            <div id="hiddenInputs">
+                                <div class="user-input">
+                                    <div class="input-group">
+                                        <input class="input--style-3" type="text" placeholder="Name" name="name" id="name">
+                                    </div>
+                                    <div class="input-group">
+                                        <input id="DOB" placeholder="Birthdate" STYLE="padding: 5px 0;
+                                        font-size: 16px; color: #ccc; background: transparent" type="date" required> 
+                                    </div>
+                                </div>
+                            </div>
+                        <div class="input-group">
+                            <div class="rs-select2 js-select-simple select--no-search">
+                                <label for="gender" style="padding: 5px 0;
+                                font-size: 16px; color: #ccc; background: transparent">Genre    </label>
+                                <select name="gender" id="inputGenre" required>
+                                </select>
+                                <div class="select-dropdown"></div>
+                            </div>
+                        </div>
+                        <div class="p-t-deadspace">
+                            <div id="error"></div>
+                        </div>
+                        <button class="btn btn--pill btn--green" type="submit">Submit</button>
+                    </div>
+                    </form>
+                    
+                </div>
+                <div id=hiddenOutput>
+                    <div class="card card-4">
+                        <div class="card-heading"></div>
+                        <div class="card-body">
+                            <h2 class="list"></h2>
+                            <ol id=songList></ol>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+<script type="text/javascript" src="bundle.js"></script></body>
+
+</html>
