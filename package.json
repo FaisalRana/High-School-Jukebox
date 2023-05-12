@@ -9,11 +9,11 @@
     "lint": "eslint src/*.js",
     "test": "jest --coverage",
     "predeploy": "npm run build",
-    "deploy": "gh-pages -d build"
+    "deploy": "gh-pages -d dist"
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/cat-denton/jsEnvTemplate.git"
+    "url": "git+https://github.com/FaisalRana/High-School-Jukebox"
   },
   "keywords": [],
   "author": "Cat Denton",
@@ -21,7 +21,7 @@
   "bugs": {
     "url": "https://github.com/cat-denton/jsEnvTemplate/issues"
   },
-  "homepage": "https://github.com/cat-denton/jsEnvTemplate#readme",
+  "homepage": "https://github.com/FaisalRana/High-School-Jukebox",
   "devDependencies": {
     "@babel/core": "^7.6.4",
     "@babel/plugin-transform-modules-commonjs": "^7.6.0",
