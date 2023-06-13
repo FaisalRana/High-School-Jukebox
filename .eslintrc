@@ -8,8 +8,7 @@
     "es6": true,
     "browser": true,
     "jquery": true,
-    "node": true,
-    "jsx": "react"
+    "node": true
   },
   "rules": {
     "semi": 1,
