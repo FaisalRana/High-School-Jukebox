@@ -3,8 +3,8 @@ export default class SpotifyService {
     // console.log("test");
     const client_id = process.env.REACT_APP_CLIENT_ID;
     const client_secret = process.env.REACT_APP_CLIENT_SECRET;
-    // console.log(client_id);
-    // console.log(client_secret);
+    console.log(client_id);
+    console.log(client_secret);
     // console.log(process.env.VITE_CLIENT_ID);
     // console.log(process.env.VITE_CLIENT_SECRET);
     // console.log(process.env.VITE_REACT_APP_TEST);
@@ -18,7 +18,7 @@ export default class SpotifyService {
         },
         body: "grant_type=client_credentials",
       });
-      console.log(response);
+      // console.log(response);
       if (!response.ok) {
         throw Error(response.statusText);
       }
