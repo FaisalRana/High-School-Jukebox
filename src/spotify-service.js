@@ -3,6 +3,7 @@ export default class SpotifyService {
     console.log("test");
     const client_id = process.env.VITE__CLIENT_ID;
     const client_secret = process.env.VITE_CLIENT_SECRET;
+    console.log(client_id);
 
     try {
       const response = await fetch("https://accounts.spotify.com/api/token", {
