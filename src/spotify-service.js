@@ -5,7 +5,6 @@ export default class SpotifyService {
     const client_secret = process.env.REACT_APP_CLIENT_SECRET;
     console.log(client_id);
     console.log(client_secret);
-    console.log(btoa(`${client_id}:${client_secret}`));
     console.log(process.env.VITE_CLIENT_ID);
     console.log(process.env.VITE_CLIENT_SECRET);
     console.log(process.env.VITE_REACT_APP_TEST);

@@ -1,18 +1,19 @@
 {
   "parserOptions": {
-      "ecmaVersion": 2018,
-      "sourceType": "module"
+    "ecmaVersion": 2020,
+    "sourceType": "module"
   },
   "extends": "eslint:recommended",
   "env": {
     "es6": true,
     "browser": true,
     "jquery": true,
-    "node": true
+    "node": true,
+    "jsx": "react"
   },
   "rules": {
-      "semi": 1,
-      "indent": ["warn", 2],
-      "no-debugger": "warn"
+    "semi": 1,
+    "indent": ["warn", 2],
+    "no-debugger": "warn"
   }
 }
