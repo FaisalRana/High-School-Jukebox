@@ -3,13 +3,6 @@ import "bootstrap";
 import "bootstrap/dist/css/bootstrap.min.css";
 import "./css/styles.css";
 import SpotifyService from "./spotify-service.js";
-var dotenv = require("dotenv");
-var dotenvExpand = require("dotenv-expand");
-
-var myEnv = dotenv.config();
-dotenvExpand.expand(myEnv);
-
-console.log(process.env);
 
 window.onload = setTimeout(function () {
   $(".card-landing").fadeOut("slow");
