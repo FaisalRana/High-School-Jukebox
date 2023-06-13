@@ -1,13 +1,13 @@
 export default class SpotifyService {
   static async getToken() {
-    console.log("test");
+    // console.log("test");
     const client_id = process.env.REACT_APP_CLIENT_ID;
     const client_secret = process.env.REACT_APP_CLIENT_SECRET;
-    console.log(client_id);
-    console.log(client_secret);
-    console.log(process.env.VITE_CLIENT_ID);
-    console.log(process.env.VITE_CLIENT_SECRET);
-    console.log(process.env.VITE_REACT_APP_TEST);
+    // console.log(client_id);
+    // console.log(client_secret);
+    // console.log(process.env.VITE_CLIENT_ID);
+    // console.log(process.env.VITE_CLIENT_SECRET);
+    // console.log(process.env.VITE_REACT_APP_TEST);
 
     try {
       const response = await fetch("https://accounts.spotify.com/api/token", {
