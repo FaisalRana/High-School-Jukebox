@@ -1,27 +1,28 @@
-const path = require('path');
-const HtmlWebpackPlugin = require('html-webpack-plugin');
-const { CleanWebpackPlugin } = require('clean-webpack-plugin');
-const Dotenv = require('dotenv-webpack');
+const path = require("path");
+const HtmlWebpackPlugin = require("html-webpack-plugin");
+const { CleanWebpackPlugin } = require("clean-webpack-plugin");
+const Dotenv = require("dotenv-webpack");
 
 module.exports = {
-  entry: './src/main.js',
+  entry: "./src/main.js",
   output: {
-    filename: 'bundle.js',
-    path: path.resolve(__dirname, 'dist')
+    filename: "bundle.js",
+    path: path.resolve(__dirname, "dist"),
   },
-  devtool: 'eval-source-map',
+  devtool: "eval-source-map",
   devServer: {
-    contentBase: './dist'
+    contentBase: "./dist",
   },
   plugins: [
-    
     new CleanWebpackPlugin(),
     new HtmlWebpackPlugin({
-      title: 'jsEnvTemplate',
-      template: './src/index.html',
-      inject: 'body'
+      title: "jsEnvTemplate",
+      template: "./src/index.html",
+      inject: "body",
     }),
-    new Dotenv()
+    new Dotenv({
+      systemvars: true, // load all the predefined 'process.env' variables which will trump anything local per dotenv specs.
+    }),
   ],
   module: {
     rules: [
@@ -29,35 +30,30 @@ module.exports = {
         test: /\.(gif|png|jpe?g)$/,
         use: [
           {
-            loader: 'file-loader',
+            loader: "file-loader",
             options: {
-              name: '[name].[ext]',
-              outputPath: 'assets/images/'
-            }
-          }
-        ]
+              name: "[name].[ext]",
+              outputPath: "assets/images/",
+            },
+          },
+        ],
       },
-      
+
       {
-        test:/\.html$/,
-        use: [
-          'html-loader'
-        ]
+        test: /\.html$/,
+        use: ["html-loader"],
       },
 
       {
         test: /\.css$/,
-        use: [
-          'style-loader',
-          'css-loader'
-        ]
+        use: ["style-loader", "css-loader"],
       },
-      
+
       {
         test: /\.js$/,
         exclude: /node_modules/,
-        loader: "eslint-loader"
-      }
-    ]
-  }
+        loader: "eslint-loader",
+      },
+    ],
+  },
 };
